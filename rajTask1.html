@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Portfolio Task 1</title>
+    <style>
+        /* --- CSS STYLES [cite: 35-40] --- */
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --light: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Flexbox Navigation [cite: 37, 48-55] */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 10%;
+            background: var(--primary);
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s; /* Hover effect [cite: 40] */
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: var(--light);
+        }
+
+        /* Responsive Grid [cite: 60-63] */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 50px 10%;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            background: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Media Queries for Mobile (≤768px) [cite: 33, 64-68] */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column; /* Stacked content [cite: 33] */
+            }
+            .nav-links {
+                margin-top: 15px;
+            }
+            .projects {
+                grid-template-columns: 1fr; /* Single column for mobile [cite: 66] */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><strong>TaskFlow</strong> Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Web Development Intern</h1>
+            <p>Building a full-stack Task Management Application.</p>
+        </section>
+
+        <section class="projects">
+            <div class="card">
+                <h3>Task 1</h3>
+                <p>Environment Setup & Static Site Deployment</p>
+            </div>
+            <div class="card">
+                <h3>Task 2</h3>
+                <p>TaskFlow Frontend (MVP with LocalStorage)</p>
+            </div>
+            <div class="card">
+                <h3>Task 3</h3>
+                <p>Backend REST API with Node.js</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Soft Nexist Project | Task 1 Complete</p>
+    </footer>
+
+</body>
+</html>
